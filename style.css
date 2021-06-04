@@ -1,0 +1,121 @@
+@import url(//db.onlinewebfonts.com/c/9f88c5b190469adccc60736a8612899c?family=LED+Digital+7);
+@import url(https://fonts.googleapis.com/css?family=Over+the+Rainbow);
+:root {
+  --border-display:#000000;
+  --outline-cal:#595959;
+  --main-body:#94b8b8;
+  --font-color:#ffffff;
+  --button-hover:#a6a6a6;
+  --summation-color:#e68a00;
+  --total-color:#ffffff;
+}
+
+* {
+  color: var(--font-color);
+  font-size: 15px;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+#mainBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--main-body);
+}
+
+#calcu {
+  border: 5px solid var(--border-display);
+  height: 400px;
+  width: 320px;
+  outline-style: solid;
+  outline: 2px solid var(--outline-cal);
+  background-color: var(--border-display);
+}
+
+#screen {
+  height: 65px;
+  background-color: var(--border-display);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Digital-7", arial;
+}
+
+.displayItems, #display, #summation {
+  height: 50%;
+  background-color: var(--border-display);
+  border: none;
+  outline: none;
+  text-align: right;
+}
+
+#summation {
+  color: var(--summation-color);
+}
+
+#display {
+  color: var(--total-color);
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  border: 1px solid var(--button-hover);
+}
+
+.gridgap, .secondLastCol, .firstLastCol, .secondCol, .firstCol, .twoCols, .fourCols, .threeCols {
+  grid-gap: 1px;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+  grid-gap: 1px;
+  height: 335px;
+  width: 100%;
+}
+
+.threeCols {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.fourCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.twoCols {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.firstCol {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.secondCol {
+  grid-template-columns: 100%;
+}
+
+.firstLastCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.secondLastCol {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
